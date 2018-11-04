@@ -89,8 +89,8 @@ for dataset in combine:
 print(test.head())
 
 train_data = train.values
-xs = train_data[:, 2:] # Pclass以降の変数
-y  = train_data[:, 1]  # 正解データ
+xs = train_data[:, 2:] # Valiables after Pclass
+y  = train_data[:, 1]  # Answer data
 
 test["Age"].fillna(train.Age.mean(), inplace=True)
 test["Fare"].fillna(train.Fare.mean(), inplace=True)
